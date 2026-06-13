@@ -233,7 +233,7 @@ body.no-scroll {
 /* Caption viết tay dưới ảnh */
 .photo-caption {
     font-family: 'Patrick Hand', cursive;
-    font-size: 2rem;
+    font-size: 1.4rem;
     color: #222;
     position: absolute;
     bottom: 15px;
