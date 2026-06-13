@@ -1,0 +1,368 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dấu Ấn Kỷ Niệm</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&family=Patrick+Hand&family=Playfair+Display:ital,wght@0,600;1,600&family=Quicksand:wght@500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Màn hình Intro (Loading) -->
+    <div id="loader-wrapper">
+        <div class="loader-circle">
+            <img src="./anh/hac.jpg" alt="Hạc" class="loader-logo">
+        </div>
+        <p class="loader-text">Đang dán những trang cuối...</p>
+        <button id="intro-start-btn">Khám Phá Kỷ Niệm</button>
+    </div>
+
+    <div class="audio-btn" id="audio-btn">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+            <path id="audio-icon-path"
+                d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z" />
+        </svg>
+    </div>
+    <audio id="bg-music" loop autoplay>
+        <source src="music.mp3" type="audio/mpeg">
+    </audio>
+
+    <div id="main-content">
+        <!-- Phần 1: Dấu Ấn Hạc -->
+        <div class="section-title-wrapper fade-up" style="margin-top: 80px; margin-bottom: 40px;">
+            <h1 class="calligraphy-title" style="font-size: 6rem;">Dấu Ấn CLB Mỹ Thuật Hạc</h1>
+            <p
+                style="font-family: 'Playfair Display', serif; font-size: 1.8rem; color: #5a4a35; font-style: italic; margin-top: 5px;">
+                Niên khóa 2025 - 2026 | Cô Hà Ánh</p>
+
+        </div>
+        <!-- Phần 1: Club fair -->
+        <div class="section-title-wrapper fade-up" style="margin-top: 60px; margin-bottom: 40px;">
+            <h1 class="calligraphy-title"> Club Fair đầu năm</h1>
+        </div>
+        <div class="note-section fade-up">
+            <div class="sticky-note">
+                <div class="tape"></div>
+                <p class="typewriter-text">
+                    Club fair<br>
+                    Nơi lần đầu gặp gỡ,<br>
+                    Cùng với các bạn K14<br>
+                    Nơi chúng ta giao lưu<br>
+                    Chào mừng đến với Hạc<br>
+                </p>
+            </div>
+        </div>
+
+        <div class="photo-item tilt-left fade-up">
+            <div class="photo-wrapper">
+                <img src="./anh/00.jpg" alt="Kỷ niệm">
+
+            </div>
+            <div class="photo-caption">Gen 3 trong ngày club fair</div>
+        </div>
+
+        <div class="photo-item tilt-right fade-up">
+            <div class="photo-wrapper">
+                <img src="./anh/0.JPG" alt="Kỷ niệm">
+
+            </div>
+            <div class="photo-caption">Nụ cười rạng rỡ của các bạn</div>
+        </div>
+
+        <!-- Phần 2: casting CLB -->
+        <div class="section-title-wrapper fade-up" style="margin-top: 60px; margin-bottom: 40px;">
+            <h1 class="calligraphy-title"> Casting Gen 4</h1>
+        </div>
+        <div class="note-section fade-up">
+            <div class="sticky-note">
+                <div class="tape"></div>
+                <p class="typewriter-text">
+                    Casting<br>
+                    Nơi chúng ta bắt đầu<br>
+                    Chào mừng đến với Hạc gen 4<br>
+                </p>
+            </div>
+        </div>
+        <div class="photo-item tilt-left-more fade-up">
+            <div class="photo-wrapper">
+                <img src="./anh/1.JPG" alt="Kỷ niệm">
+
+            </div>
+            <div class="photo-caption">Khoảnh khắc thể hiện tài năng</div>
+        </div>
+
+        <!-- Phần 3: Bonding CLB -->
+        <div class="section-title-wrapper fade-up" style="margin-top: 60px; margin-bottom: 40px;">
+            <h1 class="calligraphy-title"> Bonding CLB</h1>
+        </div>
+        <div class="note-section fade-up">
+            <div class="sticky-note">
+                <div class="tape"></div>
+                <p class="typewriter-text">
+                    Bonding<br>
+                    Nơi chúng ta tìm hiểu<br>
+                    Nơi chúng ta gắn kết<br>
+                    Cùng nhau vui chơi<br>
+                </p>
+            </div>
+        </div>
+        <div class="photo-item tilt-right fade-up">
+            <div class="photo-wrapper">
+                <img src="./anh/2.jpg" alt="Kỷ niệm">
+
+            </div>
+            <div class="photo-caption">Tấm ảnh kỉ niệm team 1</div>
+        </div>
+
+        <div class="photo-item tilt-left fade-up">
+            <div class="photo-wrapper">
+                <img src="./anh/3.jpg" alt="Kỷ niệm">
+
+            </div>
+            <div class="photo-caption">Tấm ảnh kỉ niệm team 2</div>
+        </div>
+
+        <!-- Phần 4: Hạc 20/10 -->
+        <div class="section-title-wrapper fade-up" style="margin-top: 60px; margin-bottom: 40px;">
+            <h1 class="calligraphy-title"> CLB Hạc 20/10</h1>
+        </div>
+        <div class="note-section fade-up">
+            <div class="sticky-note">
+                <div class="tape"></div>
+                <p class="typewriter-text">
+                    20/10<br>
+                    Nơi thể hiện tấm lòng<br>
+                    Nơi yêu thương trao nhau<br>
+                    Cùng với nhiều tiếng cười<br>
+                </p>
+            </div>
+        </div>
+
+        <div class="photo-item tilt-right-more fade-up">
+            <div class="photo-wrapper">
+                <img src="./anh/2010.JPG" alt="Kỷ niệm">
+
+            </div>
+            <div class="photo-caption">Món quà đáng iu</div>
+        </div>
+
+        <div class="photo-item tilt-right-more fade-up">
+            <div class="photo-wrapper">
+                <img src="./anh/hat.JPG" alt="Kỷ niệm">
+
+            </div>
+            <div class="photo-caption">Ca hát đáng yêu</div>
+        </div>
+
+        <div class="photo-item tilt-right-more fade-up">
+            <div class="photo-wrapper">
+                <img src="./anh/4.JPG" alt="Kỷ niệm">
+
+            </div>
+            <div class="photo-caption">Dấu ấn thanh xuân</div>
+        </div>
+
+        <!-- Phần 5: Giao lưu Việt Nhật -->
+        <div class="section-title-wrapper fade-up" style="margin-top: 60px; margin-bottom: 40px;">
+            <h1 class="calligraphy-title">Giao lưu Việt Nhật</h1>
+        </div>
+
+        <div class="note-section fade-up">
+            <div class="sticky-note">
+                <div class="tape"></div>
+                <p class="typewriter-text">
+                    Những tấm ảnh đẹp,<br>
+                    những người bạn mới<br>
+                    Những nụ cười rạng rỡ<br>
+                    Một kỉ niệm đáng nhớ<br>
+                </p>
+            </div>
+        </div>
+
+        <div class="photo-item tilt-left fade-up">
+            <div class="photo-wrapper">
+                <img src="./anh/5.jpg" alt="Kỷ niệm">
+
+            </div>
+            <div class="photo-caption">Những nét vẽ giao lưu</div>
+        </div>
+
+        <div class="photo-item tilt-right fade-up">
+            <div class="photo-wrapper">
+                <img src="./anh/6.JPG" alt="Kỷ niệm">
+
+            </div>
+            <div class="photo-caption">Chụp cùng nhau 1 tấm nhé!!!</div>
+        </div>
+        <!-- Phần 6: Tri ân thầy cô 20/11  -->
+        <div class="section-title-wrapper fade-up" style="margin-top: 60px; margin-bottom: 40px;">
+            <h1 class="calligraphy-title">20/11 Tri ân thầy cô</h1>
+        </div>
+
+        <div class="note-section fade-up">
+            <div class="sticky-note">
+                <div class="tape"></div>
+                <p class="typewriter-text">
+                    Những ngày làm cùng nhau,<br>
+                    Những tiếng cười đùa<br>
+                    Những lời than vãn yêu<br>
+                    Bị thầy dí deadline<br>
+                    Tất cả đã trở thành<br>
+                    Kỉ niệm đẹp của chúng ta...
+                </p>
+            </div>
+        </div>
+        <div class="photo-item tilt-left-more fade-up">
+            <div class="photo-wrapper">
+                <img src="./anh/2011.jpg" alt="Kỷ niệm">
+
+            </div>
+            <div class="photo-caption">Cùng nhau làm</div>
+        </div>
+
+        <div class="photo-item tilt-right fade-up">
+            <div class="photo-wrapper">
+                <img src="./anh/8.JPG" alt="Kỷ niệm">
+
+            </div>
+            <div class="photo-caption">Niềm vui nho nhỏ trước khi trao</div>
+        </div>
+
+        <div class="photo-item tilt-left fade-up">
+            <div class="photo-wrapper">
+                <img src="./anh/9.JPG" alt="Kỷ niệm">
+
+            </div>
+            <div class="photo-caption">Đẹp chưa nè</div>
+        </div>
+        <!-- Phần 7: Noel cùng tradi -->
+        <div class="section-title-wrapper fade-up" style="margin-top: 60px; margin-bottom: 40px;">
+            <h1 class="calligraphy-title">Noel cùng Tradi</h1>
+        </div>
+
+        <div class="note-section fade-up">
+            <div class="sticky-note">
+                <div class="tape"></div>
+                <p class="typewriter-text">
+                    Những tấm ảnh đẹp,<br>
+                    những bức tranh đáng yêu<br>
+                    Những nụ cười rạng rỡ<br>
+                    Một kỉ niệm đáng nhớ <br>
+                </p>
+            </div>
+        </div>
+        <div class="photo-item tilt-right-more fade-up">
+            <div class="photo-wrapper">
+                <img src="./anh/10.jpg" alt="Kỷ niệm">
+
+            </div>
+            <div class="photo-caption">Merry Christmas!!!</div>
+        </div>
+        <div class="photo-item tilt-left fade-up">
+            <div class="photo-wrapper">
+                <img src="./anh/11.jpg" alt="Kỷ niệm">
+
+            </div>
+            <div class="photo-caption">Đại diện Tradi checkin 1 tấm</div>
+        </div>
+
+        <!-- Phần 8: 8/3 Đáng nhớ -->
+        <div class="section-title-wrapper fade-up" style="margin-top: 60px; margin-bottom: 40px;">
+            <h1 class="calligraphy-title">8/3 Đáng nhớ</h1>
+        </div>
+
+        <div class="note-section fade-up">
+            <div class="sticky-note">
+                <div class="tape"></div>
+                <p class="typewriter-text">
+                    Những tấm ảnh kỉ niệm,<br>
+                    những món quà bằng cả tấm lòng<br>
+                    Những nụ cười tươi tắn<br>
+                    Một kỉ niệm đáng nhớ ^^<br>
+                </p>
+            </div>
+        </div>
+        <div class="photo-item tilt-right-more fade-up">
+            <div class="photo-wrapper">
+                <img src="./anh/83.jpg" alt="Kỷ niệm">
+
+            </div>
+            <div class="photo-caption">Món quà đáng iu</div>
+        </div>
+        <div class="photo-item tilt-right fade-up">
+            <div class="photo-wrapper">
+                <img src="./anh/12.jpg" alt="Kỷ niệm">
+
+            </div>
+            <div class="photo-caption">TRADI nè</div>
+        </div>
+
+        <div class="photo-item tilt-left-more fade-up">
+            <div class="photo-wrapper">
+                <img src="./anh/13.jpg" alt="Kỷ niệm">
+
+            </div>
+            <div class="photo-caption">DECOR nè</div>
+        </div>
+
+        <div class="photo-item tilt-right fade-up">
+            <div class="photo-wrapper">
+                <img src="./anh/14.jpg" alt="Kỷ niệm">
+
+            </div>
+            <div class="photo-caption">DIGI nè</div>
+        </div>
+
+        <div class="photo-item tilt-left fade-up">
+            <div class="photo-wrapper">
+                <img src="./anh/15.jpg" alt="Kỷ niệm">
+
+            </div>
+            <div class="photo-caption">HR nè</div>
+        </div>
+
+        <!-- Phần 9: Trao cert và kết thúc Gen 4 -->
+        <div class="section-title-wrapper fade-up" style="margin-top: 60px; margin-bottom: 40px;">
+            <h1 class="calligraphy-title">Trao cert và tạm biệt Gen 4</h1>
+        </div>
+
+        <div class="note-section fade-up">
+            <div class="sticky-note">
+                <div class="tape"></div>
+                <p class="typewriter-text">
+                    Những tấm ảnh đẹp,<br>
+                    Những kỉ niệm bên nhau<br>
+                    Những kỉ niệm cuối tại CLB<br>
+                    Cảm ơn đã bên nhau 1 năm vừa rồi nhé !!!<br>
+                </p>
+            </div>
+        </div>
+        <div class="photo-item tilt-right-more fade-up">
+            <div class="photo-wrapper">
+                <img src="./anh/16.jpg" alt="Kỷ niệm">
+
+            </div>
+            <div class="photo-caption">Mãi nhớ nhé, iu lắm </div>
+        </div>
+
+    </div>
+
+    <!-- Lightbox để xem ảnh to -->
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

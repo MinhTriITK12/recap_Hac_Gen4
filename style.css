@@ -1,0 +1,308 @@
+/* Reset margin & padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f5f2eb; /* Màu nền be nhạt, giống trang giấy */
+    font-family: sans-serif;
+    overflow-x: hidden;
+}
+
+body.no-scroll {
+    overflow: hidden;
+}
+
+/* --- MÀN HÌNH INTRO (Loading) --- */
+#loader-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #f5f2eb; /* Màu nền giống trang web */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 100000;
+    transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+
+.loader-circle {
+    width: 160px;
+    height: 160px;
+    border: 4px dashed #4b3d2d; /* Viền đứt nét */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+    animation: spin-slow 12s linear infinite;
+}
+
+.loader-logo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    /* Xoay ngược lại để ảnh luôn đứng thẳng trong khi viền ngoài xoay */
+    animation: spin-reverse 12s linear infinite;
+}
+
+@keyframes spin-slow {
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes spin-reverse {
+    100% { transform: rotate(-360deg); }
+}
+
+.loader-text {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.2rem;
+    color: #4b3d2d;
+    letter-spacing: 1.5px;
+}
+
+#intro-start-btn {
+    margin-top: 40px;
+    padding: 12px 35px;
+    font-size: 1.2rem;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+    color: white;
+    background-color: #4b3d2d;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(75, 61, 45, 0.3);
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    opacity: 0;
+    animation: fadeInBtn 1s ease 1.5s forwards; /* Hiện lên sau 1.5 giây */
+}
+
+#intro-start-btn:hover {
+    transform: scale(1.05);
+    background-color: #6a5742;
+}
+
+@keyframes fadeInBtn {
+    to { opacity: 1; }
+}
+
+/* Nút Audio Góc Trái */
+.audio-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 45px;
+    height: 45px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    z-index: 1000;
+    cursor: pointer;
+    color: #333;
+    transition: transform 0.2s ease;
+}
+
+.audio-btn:hover {
+    transform: scale(1.05);
+}
+
+/* Content Container */
+#main-content {
+    color: #4b3d2d;
+    padding: 0 20px 100px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+/* Tiêu đề */
+.section-title-wrapper {
+    text-align: center;
+    width: 100%;
+}
+
+.calligraphy-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 5rem;
+    font-weight: 700;
+    color: #4b3d2d;
+    margin: 0;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+/* Ghi chú - Sticky Note */
+.note-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.sticky-note {
+    background-color: #fdf2b3; /* Vàng nhạt giống screenshot */
+    padding: 35px 30px;
+    position: relative;
+    max-width: 90%;
+    width: 400px;
+    box-shadow: 2px 5px 15px rgba(0,0,0,0.08);
+    border-left: 8px solid #f0ad4e;
+}
+
+.tape {
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 120px;
+    height: 35px;
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%) rotate(-2deg);
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.05);
+}
+
+.typewriter-text {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.15rem;
+    line-height: 1.7;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Photo Gallery - Polaroid Style */
+.photo-item {
+    background-color: white;
+    padding: 12px 12px 75px 12px; /* Không gian bên dưới rộng để ghi chữ */
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    position: relative;
+    max-width: 90%;
+    width: 420px;
+    margin-bottom: 50px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Nghiêng ảnh */
+.photo-item.tilt-left { transform: rotate(-1.5deg); }
+.photo-item.tilt-right { transform: rotate(1.5deg); }
+.photo-item.tilt-left-more { transform: rotate(-3deg); }
+.photo-item.tilt-right-more { transform: rotate(3deg); }
+
+.photo-item:hover {
+    transform: rotate(0deg) scale(1.02);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.15);
+    z-index: 10;
+}
+
+.photo-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.photo-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    border: 1px solid #f0f0f0;
+}
+
+/* Sticker bên trong ảnh */
+.sticker {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    background-color: white;
+    padding: 6px 12px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: #000;
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
+    border-radius: 3px;
+}
+
+/* Caption viết tay dưới ảnh */
+.photo-caption {
+    font-family: 'Patrick Hand', cursive;
+    font-size: 2rem;
+    color: #222;
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+/* FADE UP ANIMATION */
+.fade-up {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- LIGHTBOX (Xem ảnh to với nền đen) --- */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 10000;
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(5px);
+    overflow: auto;
+}
+
+.lightbox-content {
+    margin: auto;
+    display: block;
+    max-width: 95%;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 4px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    animation: zoomIn 0.3s ease;
+}
+
+@keyframes zoomIn {
+    from {transform:scale(0.8); opacity: 0;}
+    to {transform:scale(1); opacity: 1;}
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+    z-index: 10001;
+}
+
+.lightbox-close:hover,
+.lightbox-close:focus {
+    color: #bbb;
+    text-decoration: none;
+}
+
+.photo-wrapper img {
+    cursor: pointer;
+}
